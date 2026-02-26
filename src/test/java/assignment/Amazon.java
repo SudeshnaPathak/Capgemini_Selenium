@@ -43,7 +43,8 @@ public class Amazon {
 			{
 				System.out.println(device.getText());
 				System.out.println();
-			}	
+			}
+		driver.quit();
 	}
 
 }

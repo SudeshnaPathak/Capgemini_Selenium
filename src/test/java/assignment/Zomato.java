@@ -24,10 +24,11 @@ public class Zomato {
 		driver.get("https://www.zomato.com/kolkata/order-food-online");
 		countLinks();
 		
-		driver.findElement(By.xpath("(//p[text()='Pizza'])[1]")).click();
+		driver.findElement(By.xpath("(//p[text()='Dosa'])[1]")).click();
 		countLinks();
 		
-		driver.findElement(By.xpath("//h4[text()=\"Domino's Pizza\"]")).click();
+		driver.findElement(By.xpath("//h4[contains(text(),'Dosa')]")).click();
+		driver.quit();
 	}
 
 }

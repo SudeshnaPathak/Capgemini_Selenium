@@ -1,6 +1,9 @@
 package assignment;
 
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.List;
 
@@ -13,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DemoWebShop {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException, AWTException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://demowebshop.tricentis.com/");
@@ -26,7 +29,6 @@ public class DemoWebShop {
 		{
 			System.out.println(link.getText());
 		}
-		
 		
 		System.out.println("TEST CASE: 6");
 		System.out.println(driver.findElement(By.partialLinkText("14.1-inch Laptop")).getTagName());
@@ -45,7 +47,21 @@ public class DemoWebShop {
 		System.out.println("Location: "+ r.getPoint());
 		
 		WebElement subTotal = driver.findElement(By.xpath("//span[@class='product-subtotal']"));
+		Thread.sleep(2000);
 		System.out.println("Total amount: " + subTotal.getText());
+		
+		System.out.println("TEST CASE: 8");
+		driver.navigate().back();
+		driver.findElement(By.id("small-searchterms")).sendKeys("laptop");
+		Robot robo = new Robot();
+		robo.keyPress(KeyEvent.VK_DOWN);
+		robo.keyRelease(KeyEvent.VK_DOWN);
+		Thread.sleep(2000);
+		robo.keyPress(KeyEvent.VK_ENTER);
+		robo.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(2000);
+		System.out.println("Add to Cart Enabled : "+driver.findElement(By.xpath("//input[@value='Add to cart']")).isEnabled());
+		driver.quit();
 	}
 
 }
