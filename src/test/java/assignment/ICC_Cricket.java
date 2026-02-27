@@ -21,6 +21,7 @@ public class ICC_Cricket {
 		Robot robo = new Robot();
 		for(int i = 0 ; i < 10 ; i++) 
 		{
+			//scroll down
 			robo.keyPress(KeyEvent.VK_DOWN);
 			robo.keyRelease(KeyEvent.VK_DOWN);
 			Thread.sleep(100);

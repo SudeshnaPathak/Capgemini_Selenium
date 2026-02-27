@@ -3,17 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG.hardAssert">
+      <class name="testNG.NinzaHRMHardAssert">
         <methods>
-          <include name="back"/>
-          <include name="launch"/>
-          <include name="end"/>
-          <include name="actions"/>
-          <include name="generateReports"/>
-          <include name="openApp"/>
           <include name="database"/>
+          <include name="openApp"/>
+          <include name="actions"/>
+          <include name="end"/>
+          <include name="launch"/>
+          <include name="generateReports"/>
         </methods>
-      </class> <!-- testNG.hardAssert -->
+      </class> <!-- testNG.NinzaHRMHardAssert -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

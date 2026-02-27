@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="classes">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testNG.hardAndSoftAssert"/>
+      <class name="testNG.LoginTest"/>
+      <class name="testNG.TestNgAnnotations"/>
+      <class name="testNG.DemoTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

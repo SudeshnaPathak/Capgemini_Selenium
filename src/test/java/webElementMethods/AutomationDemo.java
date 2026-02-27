@@ -23,6 +23,7 @@ public class AutomationDemo {
 		for(WebElement radio : radioButtons)
 		{
 			System.out.println(radio.isSelected());
+			System.out.println(radio.getAttribute("type"));
 			if(i != 2) radio.click();
 			i++;
 		}
@@ -31,7 +32,6 @@ public class AutomationDemo {
 			System.out.println(radio.isSelected());
 		}
 		System.out.println(driver.findElement(By.id("submitbtn")).isEnabled());
-		
 		WebElement element = driver.findElement(By.xpath("//h2[text()='Register']"));
 		System.out.println(element.getText());
 		System.out.println(element.getTagName());
@@ -44,6 +44,7 @@ public class AutomationDemo {
 		Rectangle rct = element.getRect();
 		System.out.println("Dimension: "+ rct.getDimension());
 		System.out.println("Coordinates: "+ rct.getPoint());
+		driver.quit();
 		
 	}
 
