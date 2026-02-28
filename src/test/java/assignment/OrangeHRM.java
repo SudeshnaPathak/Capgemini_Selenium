@@ -22,6 +22,7 @@ import org.openqa.selenium.interactions.Actions;
 public class OrangeHRM {
 	static WebDriver driver = null;
 	static Robot robo = null;
+	static Actions act = null;
 	public static void scrollDropdownAndSelect(int i) throws InterruptedException
 	{
 		String path = String.format("(//div[text()='-- Select --'])[%s]", i);
@@ -37,14 +38,16 @@ public class OrangeHRM {
 	{
 		String path = String.format("//input[@placeholder='%s']", placeholderValue);
 		LocalDate date = LocalDate.now();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-dd-MM");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 	    String formattedDate = date.format(formatter);
 		driver.findElement(By.xpath(path)).sendKeys(Keys.CONTROL+"A", Keys.BACK_SPACE, formattedDate.toString());
 	}
 	
 	public static void clickOnSubmit()
 	{
-		driver.findElement(By.xpath("//button[@type='submit']")).submit();
+		WebElement submitButton = driver.findElement(By.xpath("//button[@type='submit']"));
+		act.scrollToElement(submitButton);
+		submitButton.click();
 	}
 	
 	public static void Logout()
@@ -68,6 +71,7 @@ public class OrangeHRM {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		robo = new Robot();
+		act = new Actions(driver);
 		
 		driver.findElement(By.name("username")).sendKeys("Admin", Keys.TAB, "admin123", Keys.ENTER);
 		
@@ -81,7 +85,7 @@ public class OrangeHRM {
 		driver.findElement(By.xpath("//input[@placeholder='Type here']")).sendKeys("pathaksudeshna92@gmail.com", Keys.TAB, "8825250158");
 		
 		WebElement uploadButton = driver.findElement(By.xpath("//div[@class='oxd-file-button']"));
-		Actions act = new Actions(driver);
+		
         act.moveToElement(uploadButton).click().perform();
 		String filepath = "C:\\Users\\Sudeshna Pathak\\eclipse-workspace\\Capgemini_Selenium\\src\\test\\java\\assignment\\demo.txt";
 		//set filepath in clipboard
@@ -99,13 +103,6 @@ public class OrangeHRM {
 		
 		setDate("yyyy-dd-mm");
 		Thread.sleep(2000);
-		
-		for(int i = 1 ; i <= 10 ; i++)
-		{
-			robo.keyPress(KeyEvent.VK_DOWN);
-			robo.keyRelease(KeyEvent.VK_DOWN);
-			Thread.sleep(100);
-		}
 		
 		clickOnSubmit();
 		
