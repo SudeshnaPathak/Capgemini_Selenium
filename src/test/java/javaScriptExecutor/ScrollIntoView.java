@@ -18,7 +18,7 @@ public class ScrollIntoView {
 		WebElement india = driver.findElement(By.xpath("//img[@alt='Flag of India']"));
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 //		js.executeScript("arguments[0].scrollIntoView(false)", india); //Displays element at the bottom of page
-		js.executeScript("arguments[0].scrollIntoView(true)", india);  //Displays element at the  of page
+		js.executeScript("arguments[0].scrollIntoView(true)", india);  //Displays element at the top of page
 	}
 
 }

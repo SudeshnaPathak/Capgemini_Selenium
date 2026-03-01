@@ -11,6 +11,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OrangeHRM {
 	static WebDriver driver = null;
@@ -43,16 +47,17 @@ public class OrangeHRM {
 		driver.findElement(By.xpath(path)).sendKeys(Keys.CONTROL+"A", Keys.BACK_SPACE, formattedDate.toString());
 	}
 	
-	public static void clickOnSubmit()
+	public static void clickOnSubmit() throws InterruptedException
 	{
 		WebElement submitButton = driver.findElement(By.xpath("//button[@type='submit']"));
-		act.scrollToElement(submitButton);
-		submitButton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", submitButton);
+		act.moveToElement(submitButton).perform();
+		act.click(submitButton).perform();
 	}
 	
-	public static void Logout()
-	{
-		WebElement e = driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']"));
+	public static void logout() {
+	    WebElement e = driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']"));
 		e.click();
 		for(int i = 1 ; i <= 4 ; i++)
 		{
@@ -64,8 +69,8 @@ public class OrangeHRM {
 	}
 	
 	public static void main(String[] args) throws AWTException, InterruptedException {
-//		ChromeOptions options = new ChromeOptions();
-//		options.addArguments("--incognito");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--incognito");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -102,20 +107,17 @@ public class OrangeHRM {
 		robo.keyRelease(KeyEvent.VK_ENTER);
 		
 		setDate("yyyy-dd-mm");
-		Thread.sleep(2000);
 		
 		clickOnSubmit();
 		
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//a[text()='Candidates']")).click();
 		
-		scrollDropdownAndSelect(1);
-		Thread.sleep(2000);
-		scrollDropdownAndSelect(1);
-		Thread.sleep(2000);
-		scrollDropdownAndSelect(2);
-		Thread.sleep(2000);
-		scrollDropdownAndSelect(2);
+		for(int i = 1 ; i <= 5 ; i++)
+		{
+			scrollDropdownAndSelect(1);
+			Thread.sleep(2000);
+		}
 		
 		WebElement candidateName = driver.findElement(By.xpath("//input[@placeholder='Type for hints...']"));
 		candidateName.sendKeys("Joy");
@@ -126,10 +128,7 @@ public class OrangeHRM {
 		
 		clickOnSubmit();
 		
-		WebElement e = driver.findElement(By.xpath("//span[text()='(1) Record Found']"));
-		System.out.println("Records Found: " + e.isDisplayed());
-		
-		Logout();
+		logout();
 		
 	}
 
