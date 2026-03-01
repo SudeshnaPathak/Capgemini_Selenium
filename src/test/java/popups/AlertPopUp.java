@@ -23,7 +23,7 @@ public class AlertPopUp {
 		Thread.sleep(1000);
 		a.accept();
 		Thread.sleep(1000);
-		driver.close();
+		driver.quit();
 //		a.dismiss(); NoSuchSessionException
 	}
 
