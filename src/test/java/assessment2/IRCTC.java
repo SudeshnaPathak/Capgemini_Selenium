@@ -35,8 +35,11 @@ public class IRCTC {
 		for(int i = 0 ; i < 5 ; i++)
 		{
 			System.out.println(hotels.get(i).getText());
-		}
-		driver.switchTo().window(parentId);
+		}	
+		driver.navigate().back();
+		driver.navigate().back();
+	    System.out.println("Logo Verified:" + driver.findElement(By.xpath("//label[text()='INDIAN RAILWAYS']")).isDisplayed());
+	    driver.quit();
 	}
 
 }
