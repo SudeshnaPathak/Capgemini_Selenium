@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,12 +50,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Sudeshna Pathak\eclipse-workspace\Capgemini_Selenium\parallelExecution.xml</span>
+                    <span>C:\Users\Sudeshna Pathak\eclipse-workspace\Capgemini_Selenium\crossBrowserTesting.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testNG.hardAndSoftAssert" class="method navigator-link" hash-for-method="actions">actions</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,22 +103,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testNG.LoginTest" class="method navigator-link" hash-for-method="actions">actions</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="crossBrowserTesting.Google" class="method navigator-link" hash-for-method="demo1Test">demo1Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testNG.DemoTest" class="method navigator-link" hash-for-method="demo">demo</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="crossBrowserTesting.Google" class="method navigator-link" hash-for-method="demo1Test">demo1Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testNG.TestNgAnnotations" class="method navigator-link" hash-for-method="test1">test1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="crossBrowserTesting.Instagram" class="method navigator-link" hash-for-method="demo2Test">demo2Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testNG.TestNgAnnotations" class="method navigator-link" hash-for-method="test2">test2</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="crossBrowserTesting.Instagram" class="method navigator-link" hash-for-method="demo2Test">demo2Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -147,42 +133,24 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testNG.hardAndSoftAssert</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="actions">
-                  </a> <!-- actions -->
-                  <span class="method-name">actions</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	expected [Search1] but found [Search]
-	at testNG.hardAndSoftAssert.actions(hardAndSoftAssert.java:61)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testNG.DemoTest</span>
+              <span class="class-name">crossBrowserTesting.Instagram</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="demo">
-                  </a> <!-- demo -->
-                  <span class="method-name">demo</span>
+                  <a name="demo2Test">
+                  </a> <!-- demo2Test -->
+                  <span class="method-name">demo2Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="demo2Test">
+                  </a> <!-- demo2Test -->
+                  <span class="method-name">demo2Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -190,36 +158,21 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testNG.LoginTest</span>
+              <span class="class-name">crossBrowserTesting.Google</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="actions">
-                  </a> <!-- actions -->
-                  <span class="method-name">actions</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testNG.TestNgAnnotations</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="test1">
-                  </a> <!-- test1 -->
-                  <span class="method-name">test1</span>
+                  <a name="demo1Test">
+                  </a> <!-- demo1Test -->
+                  <span class="method-name">demo1Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test2">
-                  </a> <!-- test2 -->
-                  <span class="method-name">test2</span>
+                  <a name="demo1Test">
+                  </a> <!-- demo1Test -->
+                  <span class="method-name">demo1Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -227,21 +180,27 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sudeshna Pathak\eclipse-workspace\Capgemini_Selenium\parallelExecution.xml</span>
+            <span class="header-content">C:\Users\Sudeshna Pathak\eclipse-workspace\Capgemini_Selenium\crossBrowserTesting.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite parallel=&quot;classes&quot; name=&quot;Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;Test&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testNG.hardAndSoftAssert&quot;/&gt;
-      &lt;class name=&quot;testNG.LoginTest&quot;/&gt;
-      &lt;class name=&quot;testNG.TestNgAnnotations&quot;/&gt;
-      &lt;class name=&quot;testNG.DemoTest&quot;/&gt;
+      &lt;class name=&quot;crossBrowserTesting.Google&quot;/&gt;
+      &lt;class name=&quot;crossBrowserTesting.Instagram&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test2&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;crossBrowserTesting.Google&quot;/&gt;
+      &lt;class name=&quot;crossBrowserTesting.Instagram&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test2 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -253,7 +212,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (4 classes)</span>
+                <span class="test-name">Test1 (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Test2 (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -279,32 +241,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'demo')
-data.setCell(0, 2, 'testNG.DemoTest')
-data.setCell(0, 3, 7623);
+data.setCell(0, 1, 'demo2Test')
+data.setCell(0, 2, 'crossBrowserTesting.Instagram')
+data.setCell(0, 3, 6731);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'actions')
-data.setCell(1, 2, 'testNG.hardAndSoftAssert')
-data.setCell(1, 3, 3156);
+data.setCell(1, 1, 'demo1Test')
+data.setCell(1, 2, 'crossBrowserTesting.Google')
+data.setCell(1, 3, 4100);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'actions')
-data.setCell(2, 2, 'testNG.LoginTest')
-data.setCell(2, 3, 1939);
+data.setCell(2, 1, 'demo1Test')
+data.setCell(2, 2, 'crossBrowserTesting.Google')
+data.setCell(2, 3, 2480);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'test1')
-data.setCell(3, 2, 'testNG.TestNgAnnotations')
-data.setCell(3, 3, 7);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'test2')
-data.setCell(4, 2, 'testNG.TestNgAnnotations')
-data.setCell(4, 3, 2);
+data.setCell(3, 1, 'demo2Test')
+data.setCell(3, 2, 'crossBrowserTesting.Instagram')
+data.setCell(3, 3, 2452);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -330,174 +288,48 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testNG.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">database</span>
+              <div class="chronological-class-name">crossBrowserTesting.Google</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">lauchBrowser(firefox)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.TestNgAnnotations</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforesuite</span>
-                <span class="method-start">18 ms</span>
-              </div> <!-- configuration-suite before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.hardAndSoftAssert</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">database</span>
-                <span class="method-start">19 ms</span>
-              </div> <!-- configuration-suite before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.TestNgAnnotations</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">beforetest</span>
-                <span class="method-start">27 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.hardAndSoftAssert</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">launch</span>
-                <span class="method-start">62 ms</span>
               </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.TestNgAnnotations</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">beforeclass</span>
-                <span class="method-start">62 ms</span>
+                <span class="method-name">lauchBrowser(chrome)</span>
+                <span class="method-start">1 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">demo1Test</span>
+                <span class="method-start">1496 ms</span>
+              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testNG.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">crossBrowserTesting.Instagram</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">launch</span>
-                <span class="method-start">62 ms</span>
+                <span class="method-name">lauchBrowser(chrome)</span>
+                <span class="method-start">3980 ms</span>
               </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.TestNgAnnotations</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">beforemethod</span>
-                <span class="method-start">81 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.DemoTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">demo</span>
-                <span class="method-start">81 ms</span>
+                <span class="method-name">demo2Test</span>
+                <span class="method-start">4952 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testNG.TestNgAnnotations</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">crossBrowserTesting.Google</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">test1</span>
-                <span class="method-start">84 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">aftermethod</span>
-                <span class="method-start">94 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforemethod</span>
-                <span class="method-start">96 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">test2</span>
-                <span class="method-start">97 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">aftermethod</span>
-                <span class="method-start">100 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterclass</span>
-                <span class="method-start">102 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.hardAndSoftAssert</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">openApp</span>
-                <span class="method-start">7451 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">openApp</span>
-                <span class="method-start">7451 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.hardAndSoftAssert</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">actions</span>
-                <span class="method-start">10784 ms</span>
+                <span class="method-name">demo1Test</span>
+                <span class="method-start">5300 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testNG.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">crossBrowserTesting.Instagram</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">lauchBrowser(firefox)</span>
+                <span class="method-start">9402 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">actions</span>
-                <span class="method-start">11927 ms</span>
+                <span class="method-name">demo2Test</span>
+                <span class="method-start">12884 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">back</span>
-                <span class="method-start">13870 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.hardAndSoftAssert</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">back</span>
-                <span class="method-start">13949 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">end</span>
-                <span class="method-start">16154 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
-                <span class="method-name">end</span>
-                <span class="method-start">17002 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.TestNgAnnotations</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">aftertest</span>
-                <span class="method-start">17362 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite after">
-                <span class="method-name">generateReports</span>
-                <span class="method-start">17428 ms</span>
-              </div> <!-- configuration-suite after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.hardAndSoftAssert</div> <!-- chronological-class-name -->
-              <div class="configuration-suite after">
-                <span class="method-name">generateReports</span>
-                <span class="method-start">17429 ms</span>
-              </div> <!-- configuration-suite after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testNG.TestNgAnnotations</div> <!-- chronological-class-name -->
-              <div class="configuration-suite after">
-                <span class="method-name">aftersuite</span>
-                <span class="method-start">17429 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
